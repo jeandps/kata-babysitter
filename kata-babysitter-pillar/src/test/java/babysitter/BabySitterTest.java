@@ -57,5 +57,22 @@ public class BabySitterTest {
     	assertEquals("B", myBabySitter.getMyFamily().getsName());
     }
     
+    @Test
+    public void babySitterCalculatesPayForFamilyA() {
+        BabySitter myBabySitter = new BabySitter(17, 28,"A");
+        assertEquals(6*15+5*20, myBabySitter.calculatePay());
+    }
+    
+    @Test
+    public void babySitterCalculatesPayForFamilyB() {
+        BabySitter myBabySitter = new BabySitter(20, 24,"B");
+        assertEquals(12*2+8*2, myBabySitter.calculatePay());
+    }
+    
+    @Test
+    public void babySitterCalculatesPayForFamilyC() {
+        BabySitter myBabySitter = new BabySitter(21, 27,"C");
+        assertEquals(6*15, myBabySitter.calculatePay());
+    }
 
 }

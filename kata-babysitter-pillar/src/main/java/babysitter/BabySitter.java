@@ -15,10 +15,13 @@ public class BabySitter {
 	private int iEndTime;
 	
 	private Family myFamily;
+	private PaymentManager myPaymentManager;
 
 	public BabySitter() {
 		this.setiStartTime(EARLIEST_START);
 		this.setiEndTime(MAXIMUM_END);
+		this.setMyFamily(new Family("A"));
+		this.setMyPaymentManager(new PaymentManager(EARLIEST_START, MAXIMUM_END, this.myFamily));
 	}
 	
 	public BabySitter(int iStartTime, int iEndTime,String sFamilyName) {
@@ -26,6 +29,7 @@ public class BabySitter {
 		this.setiEndTime(iEndTime);
 		this.validateBabySittingTime(this.iStartTime, this.iEndTime);
 		this.setMyFamily(new Family(sFamilyName));
+		this.setMyPaymentManager(new PaymentManager(this.iStartTime, this.iEndTime, this.myFamily));
 		
 	}
 	
@@ -35,6 +39,10 @@ public class BabySitter {
         } else if (iEndTime < EARLIEST_START && iEndTime > MAXIMUM_END) {
             throw new ExceptionMessage(END_TIME_ERROR_MESSAGE);
         }
+    }
+    
+    public int calculatePay() {
+        return this.myPaymentManager.calculatePay();
     }
 
 	public int getiStartTime() {
@@ -59,6 +67,14 @@ public class BabySitter {
 
 	public void setMyFamily(Family myFamily) {
 		this.myFamily = myFamily;
+	}
+
+	public PaymentManager getMyPaymentManager() {
+		return myPaymentManager;
+	}
+
+	public void setMyPaymentManager(PaymentManager myPaymentManager) {
+		this.myPaymentManager = myPaymentManager;
 	}
 
 
