@@ -18,5 +18,11 @@ public class BabySitterTest {
 		BabySitter myBabySitter = new BabySitter(23);
 		assertEquals(23	, myBabySitter.getiStartTime());
 	}
+	
+	@Test
+	public void babySitterReturnsEndTimeAs28() {
+		BabySitter myBabySitter = new BabySitter();
+		assertEquals(28, myBabySitter.getiEndTime());
+	}
 
 }

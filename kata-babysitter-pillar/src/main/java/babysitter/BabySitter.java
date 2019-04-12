@@ -2,10 +2,15 @@ package babysitter;
 
 public class BabySitter {
 	
-	private int iStartTime;
+	public static final int EARLIEST_START = 17;
+	public static final int MAXIMUM_END = 28;
 	
+	private int iStartTime;
+	private int iEndTime;
+
 	public BabySitter() {
-		setiStartTime(17);
+		setiStartTime(EARLIEST_START);
+		setiEndTime(MAXIMUM_END);
 	}
 	
 	public BabySitter(int iStartTime) {
@@ -18,6 +23,14 @@ public class BabySitter {
 
 	public void setiStartTime(int iStartTime) {
 		this.iStartTime = iStartTime;
+	}
+	
+	public int getiEndTime() {
+		return iEndTime;
+	}
+
+	public void setiEndTime(int iEndTime) {
+		this.iEndTime = iEndTime;
 	}
 
 }
