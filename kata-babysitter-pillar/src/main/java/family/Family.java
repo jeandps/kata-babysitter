@@ -10,25 +10,29 @@ public class Family {
 	private int iRateBeforeBedTime;
 	private int iRateAfterBedAndBeforeMidnight;
 	private int iRateRestOfNight;
+	private int iBedTime;
 	
 	public Family(String sFamilyName) {
 		
 		this.setsName(sFamilyName);
 		
 		if (this.getsName().equals("A")) {
-			
+
+			this.setiBedTime(23);
 			this.setiRateBeforeBedTime(15);
 			this.setiRateAfterBedAndBeforeMidnight(0);
 			this.setiRateRestOfNight(20);	
 			
 		}else if (this.getsName().equals("B")) {
 			
+			this.setiBedTime(22);
 			this.setiRateBeforeBedTime(12);
 			this.setiRateAfterBedAndBeforeMidnight(8);
 			this.setiRateRestOfNight(16);	
 			
 		}else if (this.getsName().equals("C")) {
-			
+
+			this.setiBedTime(21);
 			this.setiRateBeforeBedTime(21);
 			this.setiRateAfterBedAndBeforeMidnight(0);
 			this.setiRateRestOfNight(15);	
@@ -70,6 +74,14 @@ public class Family {
 
 	public void setiRateRestOfNight(int iRateRestOfNight) {
 		this.iRateRestOfNight = iRateRestOfNight;
+	}
+
+	public int getiBedTime() {
+		return iBedTime;
+	}
+
+	public void setiBedTime(int iBedTime) {
+		this.iBedTime = iBedTime;
 	}
 
 }
