@@ -50,5 +50,11 @@ public class BabySitterTest {
             assertEquals(BabySitter.START_TIME_ERROR_MESSAGE, ex.getMessage());
         }
     }
+    
+    @Test
+    public void babySitterReturnDefaultBedTime() {
+    	BabySitter myBabySitter = new BabySitter();
+    	assertEquals(20, myBabySitter.getiBedTime());
+    }
 
 }
