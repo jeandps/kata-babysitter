@@ -1,8 +1,10 @@
 package babysitter;
 
 import static org.junit.Assert.*;
-
 import org.junit.Test;
+
+import exception.ExceptionMessage;;
+
 
 public class BabySitterTest {
 
@@ -30,5 +32,23 @@ public class BabySitterTest {
 		BabySitter myBabySitter = new BabySitter(23,26);
 		assertEquals(26, myBabySitter.getiEndTime());
 	}
+	
+    @Test
+    public void babySitterCheckStartTimeAndThrowsExceptionWithMessage() {
+        try {
+            new BabySitter(3, 20);
+        } catch (ExceptionMessage ex) {
+            assertEquals(BabySitter.START_TIME_ERROR_MESSAGE, ex.getMessage());
+        }
+    }
+    
+    @Test
+    public void babySitterCheckEndTimeAndThrowsExceptionWithMessage() {
+        try {
+            new BabySitter(17, 30);
+        } catch (ExceptionMessage ex) {
+            assertEquals(BabySitter.START_TIME_ERROR_MESSAGE, ex.getMessage());
+        }
+    }
 
 }
