@@ -9,22 +9,18 @@ public class BabySitter {
 	
 	public static final int EARLIEST_START = 17;
 	public static final int MAXIMUM_END = 28;
-	public static final int BED_TIME_DEFAULT = 20;
 	
 	private int iStartTime;
 	private int iEndTime;
-	private int iBedTime;
 
 	public BabySitter() {
 		setiStartTime(EARLIEST_START);
 		setiEndTime(MAXIMUM_END);
-		setiBedTime(BED_TIME_DEFAULT);
 	}
 	
-	public BabySitter(int iStartTime, int iEndTime, int iBedTime) {
+	public BabySitter(int iStartTime, int iEndTime) {
 		this.setiStartTime(iStartTime);
 		this.setiEndTime(iEndTime);
-		this.setiBedTime(iBedTime);
 		this.validateBabySittingTime(this.iStartTime, this.iEndTime);
 	}
 	
@@ -52,12 +48,5 @@ public class BabySitter {
 		this.iEndTime = iEndTime;
 	}
 
-	public int getiBedTime() {
-		return iBedTime;
-	}
-
-	public void setiBedTime(int iBedTime) {
-		this.iBedTime = iBedTime;
-	}
 
 }
