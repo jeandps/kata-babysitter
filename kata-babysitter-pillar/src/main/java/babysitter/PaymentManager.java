@@ -1,15 +1,17 @@
 package babysitter;
 
+import family.Family;
+
 public class PaymentManager {
 	
 	private int iStartTime;
 	private int iEndTime;
-	private String sFamily;
+	private Family myFamily;
 	
-	public PaymentManager(int iStartTime, int iEndTime, String sFamily) {
+	public PaymentManager(int iStartTime, int iEndTime,Family myFamily) {
 		setiStartTime(iStartTime);
 		setiEndTime(iEndTime);
-		setsFamily(sFamily);
+		setMyFamily(myFamily);
 	}
 
 	public int getiStartTime() {
@@ -28,12 +30,13 @@ public class PaymentManager {
 		this.iEndTime = iEndTime;
 	}
 
-	public String getsFamily() {
-		return sFamily;
+	public Family getMyFamily() {
+		return myFamily;
 	}
 
-	public void setsFamily(String sFamily) {
-		this.sFamily = sFamily;
+	public void setMyFamily(Family myFamily) {
+		this.myFamily = myFamily;
 	}
+
 
 }
