@@ -1,6 +1,7 @@
 package babysitter;
 
 import exception.ExceptionMessage;
+import family.Family;
 
 public class BabySitter {
 	
@@ -12,16 +13,20 @@ public class BabySitter {
 	
 	private int iStartTime;
 	private int iEndTime;
+	
+	private Family myFamily;
 
 	public BabySitter() {
 		this.setiStartTime(EARLIEST_START);
 		this.setiEndTime(MAXIMUM_END);
 	}
 	
-	public BabySitter(int iStartTime, int iEndTime) {
+	public BabySitter(int iStartTime, int iEndTime,String sFamilyName) {
 		this.setiStartTime(iStartTime);
 		this.setiEndTime(iEndTime);
 		this.validateBabySittingTime(this.iStartTime, this.iEndTime);
+		this.setMyFamily(new Family(sFamilyName));
+		
 	}
 	
     private void validateBabySittingTime(int iStartTime, int iEndTime) {
@@ -46,6 +51,14 @@ public class BabySitter {
 
 	public void setiEndTime(int iEndTime) {
 		this.iEndTime = iEndTime;
+	}
+
+	public Family getMyFamily() {
+		return myFamily;
+	}
+
+	public void setMyFamily(Family myFamily) {
+		this.myFamily = myFamily;
 	}
 
 

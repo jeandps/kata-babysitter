@@ -13,6 +13,8 @@ public class PaymentManager {
 		setiEndTime(iEndTime);
 		setMyFamily(myFamily);
 	}
+	
+	
 
 	public int getiStartTime() {
 		return iStartTime;
