@@ -15,7 +15,7 @@ public class BabySitterTest {
 	
 	@Test
 	public void babySitterAcceptParamStartTimeAndReturnIt() {
-		BabySitter myBabySitter = new BabySitter(23);
+		BabySitter myBabySitter = new BabySitter(23,28);
 		assertEquals(23	, myBabySitter.getiStartTime());
 	}
 	
@@ -23,6 +23,12 @@ public class BabySitterTest {
 	public void babySitterReturnsEndTimeAs28() {
 		BabySitter myBabySitter = new BabySitter();
 		assertEquals(28, myBabySitter.getiEndTime());
+	}
+	
+	@Test
+	public void babySitterAcceptParamEndTimeAndReturnIt() {
+		BabySitter myBabySitter = new BabySitter(23,26);
+		assertEquals(26, myBabySitter.getiEndTime());
 	}
 
 }

@@ -13,8 +13,9 @@ public class BabySitter {
 		setiEndTime(MAXIMUM_END);
 	}
 	
-	public BabySitter(int iStartTime) {
+	public BabySitter(int iStartTime, int iEndTime) {
 		setiStartTime(iStartTime);
+		setiEndTime(iEndTime);
 	}
 
 	public int getiStartTime() {
