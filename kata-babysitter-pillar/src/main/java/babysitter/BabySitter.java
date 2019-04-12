@@ -7,6 +7,10 @@ public class BabySitter {
 	public BabySitter() {
 		setiStartTime(17);
 	}
+	
+	public BabySitter(int iStartTime) {
+		setiStartTime(iStartTime);
+	}
 
 	public int getiStartTime() {
 		return iStartTime;
