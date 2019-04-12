@@ -1,7 +1,10 @@
 package family;
 
+import exception.ExceptionMessage;
 
 public class Family {
+	
+	public static final String NAME_ERROR_MESSAGE = "This family is unknown.";
 	
 	private String sName;
 	private int iRateBeforeBedTime;
@@ -31,7 +34,7 @@ public class Family {
 			this.setiRateRestOfNight(15);	
 			
 		}else {
-			//THROW ERROR
+			throw new ExceptionMessage(NAME_ERROR_MESSAGE);
 		}
 		
 			
