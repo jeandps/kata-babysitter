@@ -21,9 +21,10 @@ public class BabySitter {
 		setiBedTime(BED_TIME_DEFAULT);
 	}
 	
-	public BabySitter(int iStartTime, int iEndTime) {
+	public BabySitter(int iStartTime, int iEndTime, int iBedTime) {
 		this.setiStartTime(iStartTime);
 		this.setiEndTime(iEndTime);
+		this.setiBedTime(iBedTime);
 		this.validateBabySittingTime(this.iStartTime, this.iEndTime);
 	}
 	

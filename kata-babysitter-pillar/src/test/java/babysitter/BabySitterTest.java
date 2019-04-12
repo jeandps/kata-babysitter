@@ -17,7 +17,7 @@ public class BabySitterTest {
 	
 	@Test
 	public void babySitterAcceptParamStartTimeAndReturnIt() {
-		BabySitter myBabySitter = new BabySitter(23,28);
+		BabySitter myBabySitter = new BabySitter(23,28,20);
 		assertEquals(23	, myBabySitter.getiStartTime());
 	}
 	
@@ -29,14 +29,14 @@ public class BabySitterTest {
 	
 	@Test
 	public void babySitterAcceptParamEndTimeAndReturnIt() {
-		BabySitter myBabySitter = new BabySitter(23,26);
+		BabySitter myBabySitter = new BabySitter(23,26,20);
 		assertEquals(26, myBabySitter.getiEndTime());
 	}
 	
     @Test
     public void babySitterCheckStartTimeAndThrowsExceptionWithMessage() {
         try {
-            new BabySitter(3, 20);
+            new BabySitter(3, 20,20);
         } catch (ExceptionMessage ex) {
             assertEquals(BabySitter.START_TIME_ERROR_MESSAGE, ex.getMessage());
         }
@@ -45,7 +45,7 @@ public class BabySitterTest {
     @Test
     public void babySitterCheckEndTimeAndThrowsExceptionWithMessage() {
         try {
-            new BabySitter(17, 30);
+            new BabySitter(17, 30,20);
         } catch (ExceptionMessage ex) {
             assertEquals(BabySitter.START_TIME_ERROR_MESSAGE, ex.getMessage());
         }
@@ -55,6 +55,12 @@ public class BabySitterTest {
     public void babySitterReturnDefaultBedTime() {
     	BabySitter myBabySitter = new BabySitter();
     	assertEquals(20, myBabySitter.getiBedTime());
+    }
+    
+    @Test
+    public void babySitterAcceptParamBedTime() {
+    	BabySitter myBabySitter = new BabySitter(17,30,22);
+    	assertEquals(22, myBabySitter.getiBedTime());
     }
 
 }
