@@ -14,8 +14,8 @@ public class BabySitter {
 	private int iEndTime;
 
 	public BabySitter() {
-		setiStartTime(EARLIEST_START);
-		setiEndTime(MAXIMUM_END);
+		this.setiStartTime(EARLIEST_START);
+		this.setiEndTime(MAXIMUM_END);
 	}
 	
 	public BabySitter(int iStartTime, int iEndTime) {

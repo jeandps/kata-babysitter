@@ -1,0 +1,72 @@
+package family;
+
+
+public class Family {
+	
+	private String sName;
+	private int iRateBeforeBedTime;
+	private int iRateAfterBedAndBeforeMidnight;
+	private int iRateRestOfNight;
+	
+	public Family(String sFamilyName) {
+		
+		this.setsName(sFamilyName);
+		
+		if (this.getsName().equals("A")) {
+			
+			this.setiRateBeforeBedTime(15);
+			this.setiRateAfterBedAndBeforeMidnight(0);
+			this.setiRateRestOfNight(20);	
+			
+		}else if (this.getsName().equals("B")) {
+			
+			this.setiRateBeforeBedTime(12);
+			this.setiRateAfterBedAndBeforeMidnight(8);
+			this.setiRateRestOfNight(16);	
+			
+		}else if (this.getsName().equals("C")) {
+			
+			this.setiRateBeforeBedTime(21);
+			this.setiRateAfterBedAndBeforeMidnight(0);
+			this.setiRateRestOfNight(15);	
+			
+		}else {
+			//THROW ERROR
+		}
+		
+			
+	}
+
+	public String getsName() {
+		return sName;
+	}
+
+	public void setsName(String sName) {
+		this.sName = sName;
+	}
+
+	public int getiRateBeforeBedTime() {
+		return iRateBeforeBedTime;
+	}
+
+	public void setiRateBeforeBedTime(int iRateBeforeBedTime) {
+		this.iRateBeforeBedTime = iRateBeforeBedTime;
+	}
+
+	public int getiRateAfterBedAndBeforeMidnight() {
+		return iRateAfterBedAndBeforeMidnight;
+	}
+
+	public void setiRateAfterBedAndBeforeMidnight(int iRateAfterBedAndBeforeMidnight) {
+		this.iRateAfterBedAndBeforeMidnight = iRateAfterBedAndBeforeMidnight;
+	}
+
+	public int getiRateRestOfNight() {
+		return iRateRestOfNight;
+	}
+
+	public void setiRateRestOfNight(int iRateRestOfNight) {
+		this.iRateRestOfNight = iRateRestOfNight;
+	}
+
+}
